@@ -1081,5 +1081,8 @@ async function startPlatform() {
     console.log(`NexCart premium node engine live on port ${PORT}`);
   });
 }
+if (!process.env.VERCEL) {
+  startPlatform();
+}
 
-startPlatform();
+export default app;
