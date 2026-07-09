@@ -1,0 +1,6 @@
+{
+  "name": "NexCart",
+  "description": "Premium electronics store with realistic shipping, tracking, analytics, and personalization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

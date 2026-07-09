@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Night theme rules (AMOLED pitch black) */
+.night {
+  background-color: #000000 !important;
+}
+
+/* Deep overrides for background panels */
+.night .bg-zinc-950,
+.night .bg-zinc-950\/20,
+.night .dark\:bg-zinc-950,
+.night .dark\:bg-zinc-950\/20,
+.night .dark\:bg-zinc-950\/80 {
+  background-color: #000000 !important;
+}
+
+.night .bg-zinc-900,
+.night .dark\:bg-zinc-900,
+.night .dark\:bg-zinc-900\/50,
+.night .bg-zinc-900\/50 {
+  background-color: #07070a !important;
+}
+
+.night .border-zinc-800,
+.night .dark\:border-zinc-800,
+.night .border-zinc-850,
+.night .dark\:border-zinc-850 {
+  border-color: #111116 !important;
+}
+
+.night .shadow-xl {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.9), 0 8px 10px -6px rgba(0, 0, 0, 0.9) !important;
+}
+
