@@ -14,8 +14,14 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// Path to DB JSON
-const dbPath = path.join(process.cwd(), 'db.json');
+// Path to DB JSON - check dist first (production), then project root
+let dbPath = path.join(process.cwd(), 'db.json');
+if (process.env.NODE_ENV === 'production') {
+  const distDbPath = path.join(__dirname, 'db.json');
+  if (fs.existsSync(distDbPath)) {
+    dbPath = distDbPath;
+  }
+}
 
 // Interface representation for local database sync
 interface DbSchema {
