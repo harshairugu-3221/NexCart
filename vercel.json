@@ -1,13 +1,10 @@
 {
-  "buildCommand": "vite build",
-  "outputDirectory": "dist",
-  "framework": "vite",
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" }
-  ],
-  "functions": {
-    "api/index.ts": {
-      "includeFiles": "db.json"
-    }
+  "buildCommand": "npm run build",
+  "serverFunctions": {
+    "directory": "dist",
+    "region": "auto"
+  },
+  "env": {
+    "NODE_ENV": "production"
   }
 }
